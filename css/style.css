@@ -10,8 +10,10 @@
 main {
   height: calc(100% - 90px) ;
 }
-a {
+a:hover {
   text-decoration: none;
+}
+a {
   color:  #a4a4a4;
 }
 li {
@@ -86,6 +88,9 @@ span {
   z-index: 100;
   padding-left: 20px;
 }
+.main_nav a:hover {
+  color: white;
+}
 #logo {
   margin-bottom: 20px;
   width: 70%;
@@ -112,10 +117,20 @@ span {
   overflow: auto;
   max-height: 450px;
 }
+.playlist i {
+  background-color: grey;
+  color: black;
+  margin-right: 10px;
+}
+.playlist i:hover {
+  background-color: white;
+}
+.playlist a:first-child {
+  font-size: 16px;
+}
 .install_app {
   flex-shrink: 0;
   overflow: hidden;
-  /* min-height: 20%; */
 }
 .install_app hr {
   width: 80%;
@@ -144,16 +159,24 @@ span {
   width: calc(100% - 300px);
   margin-left: 300px;
   padding: 100px 0;
-  background-color: #1d2f3f;
+  background-color: #13202c;
 }
 .main_container ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+#underline{
+  border-bottom: 2px solid green;
+  color: white;
+}
+.main_list a:hover{
+  color: white;
+}
 .main_container li {
   display: inline;
   margin: 5px 10px;
+  font-weight: bolder;
 }
 .main_container h2 {
   margin:30px 0 10px 10px;
@@ -231,6 +254,15 @@ footer {
   cursor: pointer;
   margin-left: 10px;
 }
+.volume_right i {
+  position: absolute;
+  top: 28%;
+  display: none;
+}
+.volume_right:hover i {
+  display: inline;
+}
+
 
 #play {
   font-size: 30px;
@@ -239,11 +271,25 @@ footer {
   border: 3px solid gray;
   width: 80%;
   margin: 10px auto;
-
-img .hide {
+  cursor: pointer;
+}
+.volume_mid i {
+  position: absolute;
+  top: 55%;
+  left: 40%;
   display: none;
 }
-
+.volume_mid:hover i {
+  display: block;
+}
+footer i {
+  color:  #a4a4a4;
+  cursor: pointer;
+}
+footer i:hover {
+  transform: scale(1.2);
+  color: white;
+}
 /* media */
 @media screen and (max-width: 600px) {
   .main_nav {
