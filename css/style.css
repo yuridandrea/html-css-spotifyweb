@@ -184,6 +184,14 @@ span {
   font-weight: bolder;
   font-size: 1.7em;
 }
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
 .text_pic:hover .overlay {
   opacity: 1;
 }
@@ -234,7 +242,7 @@ footer {
 }
 .vol {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -248,8 +256,9 @@ footer {
 }
 
 .volume_right {
-  border: 3px solid gray;
+  height: 5px;
   border-radius: 10px;
+  background-color: grey;
   width: 40%;
   cursor: pointer;
   margin-left: 10px;
@@ -257,21 +266,27 @@ footer {
 .volume_right i {
   position: absolute;
   top: 28%;
+  left: 83%;
   display: none;
 }
-.volume_right:hover i {
-  display: inline;
-}
-
-
 #play {
   font-size: 30px;
 }
 .volume_mid {
-  border: 3px solid gray;
+  height:5px;
   width: 80%;
+  background-color: gray;
   margin: 10px auto;
   cursor: pointer;
+}
+.bar_green_hover {
+  height: 5px;
+  width: 25%;
+  background-color: lime;
+  opacity: 0;
+}
+.vol:hover .bar_green_hover {
+  opacity: 1;
 }
 .volume_mid i {
   position: absolute;
@@ -279,7 +294,22 @@ footer {
   left: 40%;
   display: none;
 }
-.volume_mid:hover i {
+.vol_right {
+  width: 70%;
+}
+.green_hover {
+  height: 5px;
+  width: 25%;
+  background-color:lime;
+  opacity: 0;
+}
+.vol_right:hover .green_hover {
+opacity: 1;
+}
+.vol:hover i {
+  display: block;
+}
+.vol_right:hover i {
   display: block;
 }
 footer i {
